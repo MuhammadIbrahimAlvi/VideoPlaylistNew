@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Container Class */
+.container-wrapper {
+  width: 100%;
+}
+/* NavBar Class */
+.nav-section {
+  width: 100%;
+  background-color: #ff0000;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+/* Icon Div */
+.nav-icon {
+  width: 30%;
+  display: flex;
+  margin-left: 5%;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Goblin One", cursive;
+}
+/* Input Form */
+.nav-inputs {
+  width: 70%;
+}
+.nav-inputs input {
+  height: 45px;
+  font-family: "Goblin One", cursive;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px;
+}
+/* Add Button Playlist */
+.nav-inputs input#add-playlist-btn {
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #606060;
+  color: white;
+}
+/* videos-section */
+.videos-section {
+  width: 100%;
+  margin-top: 25px;
+  height: 500px;
+  display: flex;
+}
+/* left side */
+.playing-video {
+  font-family: "Girassol", cursive;
+  width: 60%;
+  margin-left: 10px;
+}
+/* rightside */
+.videos-list {
+  width: 30%;
+  margin-left: 5%;
+  overflow-y: auto;
+  margin-left: 5%;
+}
+.video-header {
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Girassol", cursive;
+  padding-left: 10px;
+}
+.iframes-video {
+  position: relative;
+  width: 100%;
+  border: 0px 0px 2px 0px solid black;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+}
+.iframes-video iframe {
+  width: 90%;
+  height: 60px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+/* add btn */
+.buttons {
+  border-radius: 5px;
+  background-color: gray; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px gray;
+
+}
+.buttons:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.videos-play {
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 961px) {
+  .nav-section {
+    width: 100%;
+    background-color: #ff0000;
+    height: auto;
+    display: block;
+    align-items: center;
+    
+  }
+  .nav-icon {
+    width: 100%;
+ text-align: center;
+    margin-top: 5px;
+    font-family: "Goblin One", cursive;
+  }
+  .nav-inputs input {
+    height: 45px;
+    font-family: "Goblin One", cursive;
+    margin-left: 50%;
+margin-top: 15px;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  /* videos-section */
+.videos-section {
+  width: 100%;
+  margin-top: 25px;
+  height: 500px;
+display: block;
+}
+  /* left side */
+.playing-video {
+  font-family: "Girassol", cursive;
+  width: 100%;
+  margin-left: 10px;
+}
+}
