@@ -155,7 +155,7 @@ box-shadow: 05px 05px 05px grey;
 }
 .del-btn{
   border-radius: 30px;
-  width: 10%;
+  width: 20%;
   height: 40px;
   background-color: white;
   cursor: pointer;
@@ -280,3 +280,4 @@ display: block;
   margin-left: 5%;
 }
 }
+
