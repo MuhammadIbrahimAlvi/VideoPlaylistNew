@@ -4,6 +4,7 @@ const validName = /^[a-z ,.'-]+$/i;
 var vid = [];
 // calling getVideos
 getVideos();
+// Function on AddButton to Playlist
 function Store(videoNams, videoURLs) {
   if (localStorage.getItem('videos') === null) {
     // start of if
@@ -26,13 +27,18 @@ function Store(videoNams, videoURLs) {
   // console.log(vid)
 }
 
+
+
+
+
+
+
+// Getting video from the local Storage and Render
 function getVideos() {
   
   if (localStorage.getItem('videos') !== null ) {
     vid = JSON.parse(localStorage.getItem('videos'));
   }
- 
-
 vid.forEach((ele)=>{
   // console.log(ele.videoNam)
  // Creating li
@@ -108,7 +114,7 @@ document.getElementById("add-list").addEventListener("click", (e) => {
 
   // calling store
   Store(inputVideoName.value, inputUrl.value);
-
+// validation
   if (validURL.test(inputUrl.value) && validName.test(inputVideoName.value)) {
     // Creating li
     let li = document.createElement("li");
@@ -121,6 +127,12 @@ document.getElementById("add-list").addEventListener("click", (e) => {
     li.setAttribute("url", inputUrl.value);
     li.innerHTML = inputVideoName.value;
 
+
+
+
+
+
+    
     // Function on li
 
     li.addEventListener("click", (e) => {
@@ -159,11 +171,16 @@ document.getElementById("add-list").addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-var counter=0;
 
+
+
+
+
+var counter=0;
+// Getting Button for ThemeChanger
 let mod = document.querySelector('.themeChanger')
 mod.addEventListener('click',modeChange)
-
+// Theme Function
 function modeChange(){
 if(counter%2===0)
 {
@@ -173,8 +190,7 @@ if(counter%2===0)
   document.querySelector('.fa-file-video').style.color = 'white'
   document.querySelector('.headings').style.color='white'
   document.getElementById('h5-iframe').style.color="white"
-  // document.getElementById('nav-section').style.borderBottom="1px solid white"
-  // document.querySelector('.button').style.border ="1px solid white"
+
 }else{
   document.body.style.backgroundColor="white"
   document.querySelector('.video-header').style.color='black'
@@ -182,16 +198,20 @@ if(counter%2===0)
   document.querySelector('.headings').style.color='black'
   document.getElementById('h5-iframe').style.color="black"
   mod.style.backgroundColor="black"
-  // document.querySelector('.button').style.border ="1px solid black"
+ 
 
 }
   counter++
 }
 
+
+
+
+
+// Deleting Video from Playlist and Local Storage
 function removeItem(e) {
   let obj = e.target.parentElement.parentElement.lastChild
   let objAtt = obj.getAttribute("name")
-  // console.log(vid)
 let videoss = JSON.parse(localStorage.getItem('videos'));
 console.log(videoss)
 let index = videoss.findIndex(video=>{
@@ -201,6 +221,6 @@ videoss.splice(index,1)
 localStorage.setItem('videos',JSON.stringify(videoss))
 console.log(videoss)
   e.target.parentElement.parentElement.remove()
-//  localStorage.removeItem(e.target.value)
+
 }
 

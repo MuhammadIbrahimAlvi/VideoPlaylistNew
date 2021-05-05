@@ -237,7 +237,7 @@ input[type=text]:focus {
   color: #3498db;
 
 }
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 1131px) {
   .nav-section {
     width: 100%;
     /* background-color: #ff0000; */
@@ -257,7 +257,7 @@ text-align: center;
   .nav-inputs input {
     height: 45px;
     font-family: "Goblin One", cursive;
-    margin-left: 50%;
+    margin-left: 55%;
 margin-top: 15px;
    
   }
