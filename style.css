@@ -9,22 +9,23 @@
 }
 /* NavBar Class */
 .nav-section {
+
   width: 100%;
   background-color: black;
   height: 10vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  
 }
 /* Icon Div */
 .nav-icon {
-  width: 30%;
+  width: 20%;
   display: flex;
   margin-left: 5%;
   color: #fff;
   
   flex-wrap: wrap;
-  
+  overflow: hidden;
   align-items: center;
   font-family: "Goblin One", cursive;
 }
@@ -250,7 +251,7 @@ input[type=text]:focus {
     width: 100%;
 /* margin: 5px auto; */
 text-align: center;
- overflow: hidden;
+ 
     
     font-family: "Goblin One", cursive;
   }
@@ -275,9 +276,16 @@ display: block;
 }
 .videos-list {
   width: 100%;
-  margin-left: 5%;
   overflow-y: auto;
-  margin-left: 5%;
+ 
 }
 }
-
+@media screen and (max-width:399px){
+  .nav-inputs input {
+    height: 45px;
+    font-family: "Goblin One", cursive;
+    margin-left: 15%;
+margin-top: 15px;
+   
+  }
+}
