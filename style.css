@@ -10,17 +10,21 @@
 /* NavBar Class */
 .nav-section {
   width: 100%;
-  background-color: #ff0000;
+  background-color: black;
   height: 10vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 /* Icon Div */
 .nav-icon {
   width: 30%;
   display: flex;
   margin-left: 5%;
+  color: #fff;
+  
   flex-wrap: wrap;
+  
   align-items: center;
   font-family: "Goblin One", cursive;
 }
@@ -40,7 +44,7 @@
   height: 30px;
   border-radius: 5px;
   outline: none;
-  background-color: #606060;
+  background-color: #3498db;
   color: white;
 }
 /* videos-section */
@@ -62,12 +66,15 @@
   margin-left: 5%;
   overflow-y: auto;
   margin-left: 5%;
+  
+box-shadow: 05px 05px 05px grey;
 }
 .video-header {
   width: 100%;
   font-size: 2rem;
   font-family: "Girassol", cursive;
   padding-left: 10px;
+ 
 }
 .iframes-video {
   position: relative;
@@ -81,21 +88,92 @@
   width: 90%;
   height: 60px;
 }
-
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
+/* Styling of Buttons */
+.btn{
+  border: 1px solid black;
+  background: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-family: "montserrat";
   cursor: pointer;
-  margin: 5px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
 }
+.btn1,.btn2{
+  color: #3498db;
+}
+.btn2{
+  width: 90%;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+ 
+}
+.btnn{
+  color: #3498db;
+}
+
+
+.btn1:hover,.btn2:hover{
+  color: #fff;
+}
+.btnn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: red !important;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn2::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.btn1:hover::before,.btn2:hover::before{
+  height: 180%;
+}
+.del-btn{
+  border-radius: 30px;
+  width: 10%;
+  height: 40px;
+  background-color: white;
+  cursor: pointer;
+  color: #555555;
+  margin-left: 2.5%;
+margin-top: 2%;
+border: 1px solid white;
+}
+.del-btn:hover{
+  background-color: #3498db;
+  transition: 0.8s ease-in;
+  color: white;
+  border: 1px solid white;
+  
+}
+
+/* End of Mutli Btn styling */
+
 /* add btn */
 .buttons {
   border-radius: 5px;
@@ -121,11 +199,48 @@
 .videos-play {
   overflow-y: auto;
 }
+/* input text field */
+input[type=text] {
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
 
+input[type=text]:focus {
+  width: 35%;
+  background-color: #CCCCCC;
+  color: white;
+}
+.themeChanger{
+  position: absolute;
+  /* background-color: blue; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.themeChanger:before{
+  content:'\f186';
+  color: #3498db;
+
+}
 @media screen and (max-width: 961px) {
   .nav-section {
     width: 100%;
-    background-color: #ff0000;
+    /* background-color: #ff0000; */
     height: auto;
     display: block;
     align-items: center;
@@ -133,8 +248,10 @@
   }
   .nav-icon {
     width: 100%;
- text-align: center;
-    margin-top: 5px;
+/* margin: 5px auto; */
+text-align: center;
+ overflow: hidden;
+    
     font-family: "Goblin One", cursive;
   }
   .nav-inputs input {
@@ -142,9 +259,7 @@
     font-family: "Goblin One", cursive;
     margin-left: 50%;
 margin-top: 15px;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px 1px;
+   
   }
   /* videos-section */
 .videos-section {
@@ -157,6 +272,11 @@ display: block;
 .playing-video {
   font-family: "Girassol", cursive;
   width: 100%;
-  margin-left: 10px;
+}
+.videos-list {
+  width: 100%;
+  margin-left: 5%;
+  overflow-y: auto;
+  margin-left: 5%;
 }
 }

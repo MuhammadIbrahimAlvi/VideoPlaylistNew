@@ -34,11 +34,11 @@ function getVideos() {
  
 
 vid.forEach((ele)=>{
-  console.log(ele.videoNam)
+  // console.log(ele.videoNam)
  // Creating li
  let li = document.createElement("li");
  // classname
- li.className = "button";
+ li.className = "btn btn2";
  // id
  li.id = "created-li"
  // attributes
@@ -48,9 +48,9 @@ vid.forEach((ele)=>{
 
   // adding delete icon to li
   let icon = document.createElement("i");
-  icon.className = "fas fa-trash-alt";
+  icon.className = "fas fa-trash-alt fa-2x";
   let button = document.createElement("button");
-  button.className = "del-btn";
+  button.className = "del-btn btn2";
   button.appendChild(icon);
   button.onclick = removeItem;
   let ulmin = document.createElement("ul");
@@ -63,7 +63,7 @@ vid.forEach((ele)=>{
     console.log(e.target);
     const url = e.target.getAttribute("url");
     const name = e.target.getAttribute("name");
-console.log(url,name)
+// console.log(url,name)
     const iframe = document.getElementById("playing-iframe");
     let extract = url;
     let index = extract.search("=");
@@ -102,7 +102,7 @@ document.getElementById("add-list").addEventListener("click", (e) => {
     // Creating li
     let li = document.createElement("li");
     // classname
-    li.className = "button";
+    li.className = "btn btn2 btnn";
     // id
     li.id = "created-li"
     // attributes
@@ -130,7 +130,7 @@ document.getElementById("add-list").addEventListener("click", (e) => {
     let icon = document.createElement("i");
     icon.className = "fas fa-trash-alt";
     let button = document.createElement("button");
-    button.className = "del-btn";
+    button.className = "del-btn btn2";
     button.appendChild(icon);
     button.onclick = removeItem;
     let ulmin = document.createElement("ul");
@@ -150,4 +150,41 @@ document.getElementById("add-list").addEventListener("click", (e) => {
 
 function removeItem(e) {
   e.target.parentElement.parentElement.remove();
+  // console.log(e.target.parentElement.parentElement.parentElement)
 }
+var counter=0;
+
+let mod = document.querySelector('.themeChanger')
+mod.addEventListener('click',modeChange)
+mod.addEventListener('click',whiteTheme)
+function modeChange(){
+if(counter%2===0)
+{
+  mod.style.backgroundColor="#fff"
+  document.body.style.backgroundColor="black"
+  document.querySelector('.video-header').style.color='white'
+  document.querySelector('.fa-file-video').style.color = 'white'
+  document.querySelector('.headings').style.color='white'
+  document.getElementById('h5-iframe').style.color="white"
+  // document.querySelector('.button').style.border ="1px solid white"
+}else{
+  document.body.style.backgroundColor="white"
+  document.querySelector('.video-header').style.color='black'
+  document.querySelector('.fa-file-video').style.color = 'black'
+  document.querySelector('.headings').style.color='black'
+  document.getElementById('h5-iframe').style.color="black"
+  mod.style.backgroundColor="black"
+  // document.querySelector('.button').style.border ="1px solid black"
+
+}
+  counter++
+}
+
+
+// Clear All Item 
+var clearBtn = document.getElementById('clear-all')
+clearBtn.addEventListener('click',clearListFunction)
+function clearListFunction (){
+  console.log("working")
+  // e.preventDefault();
+  }
